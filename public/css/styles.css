@@ -1,0 +1,246 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* Normalización */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* Colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  /* Tamaños fuentes */
+  --text-sm: 1.2em;
+  --text-md: 1.6em;
+  --text-lg: 1.8em;
+  --titles: 2.4em;
+  /* Familias de fuentes */
+  --roboto: "Roboto", sans-serif;
+}
+/* Estilos comunes */
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: var(--gris-claro);
+}
+h3 {
+  font-size: var(--titles);
+}
+p {
+  font-size: var(--text-sm);
+}
+
+header {
+  background-color: var(--amarillo);
+}
+
+div.top-header {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header picture.logo {
+  display: block;
+  width: 50%;
+}
+.form {
+  width: 50%;
+}
+
+header nav {
+  font-size: var(--text-sm);
+}
+
+header ul li {
+  list-style-type: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+header .form .input {
+  background-color: white;
+  border: 1px solid black;
+  color: var(--gris-oscuro);
+  padding: 2px;
+}
+header .form .submit {
+  background-color: white;
+  border: 1px solid black;
+  width: 18px;
+  padding: 2px;
+}
+header div.top-header p {
+  text-align: center;
+}
+
+div.burger-menu {
+  text-align: center;
+}
+
+div.burger-menu i {
+  background-color: #0044aa;
+  font-size: 20px;
+  color: white;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Banner */
+section.banner img {
+  width: 100%;
+}
+
+/* Main */
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+main section article {
+  background-color: white;
+  margin: 10px 0;
+  transition: all 0.5s linear;
+}
+main section article i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  transition: all 1s ease-in-out;
+}
+main section article img {
+  width: 100%;
+}
+h2,
+.description {
+  color: var(--gris-oscuro);
+}
+
+.discount,
+.description {
+  font-size: var(--text-md);
+}
+.discount {
+  width: 70%;
+}
+.description {
+  opacity: 1;
+  margin-bottom: 0;
+  transition: opacity 1s ease-in-out;
+}
+.price {
+  font-size: var(--text-lg);
+  width: 30%;
+}
+main section article i,
+.discount {
+  color: var(--verde);
+}
+main section article i {
+  font-size: var(--text-md);
+  border: 1px solid var(--verde);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+main section article:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+main section article:hover .description {
+  opacity: 1;
+}
+main section article:hover i {
+  transform: rotate(-90deg);
+}
+main section h3 {
+  margin: 20px 0px;
+}
+
+article div.product-card {
+  width: 100%;
+  border: 1px solid var(--gris-claro);
+  padding: 15px;
+  position: relative;
+}
+
+.price-discount {
+  display: flex;
+  align-items: baseline;
+}
+
+main div form p {
+  font-size: var(--text-md);
+  font-weight: 500;
+}
+main div form label {
+  font-size: var(--text-sm);
+}
+main div form div {
+  padding: 5px;
+}
+main div form input {
+  margin: 5px;
+}
+
+/* Footer */
+
+/* Responsive */
+
+@media screen and (min-width: 361px) {
+  .description {
+    display: block;
+  }
+
+  main section article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .product-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 769px) {
+  nav {
+    display: none;
+  }
+  .description {
+    opacity: 0;
+    margin-bottom: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  main section article:hover .description {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+}
