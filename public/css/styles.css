@@ -47,20 +47,62 @@ header {
 div.top-header {
   padding: 5%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 }
 
 header picture.logo {
   display: block;
-  width: 50%;
+  width: 25%;
+  margin-right: 1em;
+  min-width: 120px;
 }
+/* Barra de búsqueda */
 .form {
-  width: 50%;
+  padding: 0;
+  flex: 20%;
+  /* max-width: 50%; */
+}
+form {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main form {
+  flex-direction: column;
 }
 
+header div form input {
+  font-family: var(--roboto);
+  font-size: var(--text-sm);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.input:focus {
+  outline: none;
+}
+
+.search {
+  background-color: transparent;
+  color: var(--gris-oscuro);
+  padding: 0.5em;
+  border: none;
+  position: relative;
+  top: 0.1em;
+}
+.search:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+/* Menu NAV */
 header nav {
   font-size: var(--text-sm);
+  display: none;
 }
 
 header ul li {
@@ -72,18 +114,21 @@ header ul li a {
 }
 header .form .input {
   background-color: white;
-  border: 1px solid black;
   color: var(--gris-oscuro);
-  padding: 2px;
+  padding: 5px;
+  border: none;
+  flex-grow: 1;
 }
-header .form .submit {
-  background-color: white;
-  border: 1px solid black;
-  width: 18px;
-  padding: 2px;
-}
+/* header .form .submit {
+  background-color: transparent;
+  width: 1.8rem;
+  padding: 0.5rem;
+} */
 header div.top-header p {
   text-align: center;
+}
+header div.top-header p i {
+  margin-right: 0.5em;
 }
 
 div.burger-menu {
@@ -141,14 +186,17 @@ h2,
 .discount,
 .description {
   font-size: var(--text-md);
+  display: flex;
+  justify-content: end;
 }
 .discount {
   width: 70%;
 }
 .description {
-  opacity: 1;
+  opacity: 0;
   margin-bottom: 0;
   transition: opacity 1s ease-in-out;
+  display: block;
 }
 .price {
   font-size: var(--text-lg);
@@ -161,7 +209,6 @@ main section article i,
 main section article i {
   font-size: var(--text-md);
   border: 1px solid var(--verde);
-  padding: 8px;
   border-radius: 50%;
 }
 
@@ -200,23 +247,192 @@ main div form label {
 main div form div {
   padding: 5px;
 }
-main div form input {
-  margin: 5px;
+.main-login div form div input {
+  width: 75%;
+  margin-top: 1rem;
+}
+
+/* Formulario login */
+.userLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.datos,
+.clave {
+  display: none;
+}
+
+#nombre,
+#password,
+#birthday,
+#user,
+#domicilio {
+  padding: 0 1rem;
+  font-family: var(--roboto);
+  font-size: var(--text-md);
+  border-radius: 0.5rem;
+  border: 1px solid var(--gris-oscuro);
+  height: 5rem;
+  /* margin: 5px 0; */
+}
+.user-type > *,
+.intereses > * {
+  padding: 0.1rem 0.1rem;
+}
+.user-type > p,
+.intereses > p {
+  padding: 0 0 0.5rem 0;
+}
+.botones {
+  width: 100%;
+  margin: 0;
+  padding: 3em 0;
+}
+
+.loginbtn {
+  background-color: var(--celeste);
+  width: 100%;
+  color: white;
+  border-radius: 0.5rem;
+  height: 5rem;
+  margin: 0;
+  font-family: var(--roboto);
+  font-size: var(--text-md);
+  border: none;
+  cursor: pointer;
+}
+.formulario {
+  font-family: var(--roboto);
+  width: 100%;
+}
+.form-register {
+  padding: 2rem;
+  align-items: flex-start;
+}
+.datos_usuario {
+  width: 100%;
+}
+.datos_usuario > * {
+  padding: 1em 0;
+}
+.datos_usuario > input {
+  margin: 0.5em 0;
+  padding-left: 0;
+  width: 100%;
+}
+.password {
+  width: 100%;
+}
+.password > input {
+  margin-top: 0.5em;
+  width: 100%;
+}
+
+.form-register div {
+  padding: 2em 0;
+}
+.intereses {
+  padding-left: 1rem;
+}
+.enviar,
+.borrar {
+  background-color: var(--celeste);
+  width: 100%;
+  color: white;
+  border-radius: 0.5rem;
+  height: 5rem;
+  margin: 5px 0;
+  font-family: var(--roboto);
+  font-size: var(--text-md);
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0022aa;
+}
+
+/* Estilos del main */
+.main-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: white;
+}
+footer section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+  padding: 2em 0 2em 0;
+  color: var(--gris-oscuro);
+}
+footer section i {
+  color: var(--celeste);
+  font-size: var(--titles);
+  padding-bottom: 1rem;
+}
 
+footer section i:hover {
+  color: #0094c6;
+}
 /* Responsive */
-
+/* Vista para tablets */
 @media screen and (min-width: 361px) {
   .description {
     display: block;
+    opacity: 1;
   }
-
+  .top-header {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  header nav {
+    font-size: var(--text-sm);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 1em;
+  }
+  header nav ul {
+    display: flex;
+    margin: 0 1rem;
+    flex-wrap: wrap;
+  }
+  header nav ul li {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .burger-menu {
+    display: none;
+  }
+  main section div.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .product-container > * {
+    flex: 45%;
+  }
   main section article {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 100%;
   }
-
+  .product-card {
+    flex: 0 50%;
+  }
   .product-container {
     display: flex;
     gap: 10px;
@@ -225,22 +441,44 @@ main div form input {
     align-items: center;
   }
 }
-@media screen and (max-width: 769px) {
-  nav {
-    display: none;
-  }
-  .description {
-    opacity: 0;
-    margin-bottom: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  main section article:hover .description {
-    opacity: 1;
-  }
-}
-
+/* Vista para desktop */
 @media screen and (min-width: 769px) {
   .burger-menu {
     display: none;
+  }
+
+  header nav {
+    font-size: var(--text-sm);
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav ul {
+    display: flex;
+    margin: 0 1rem;
+  }
+  header nav ul li {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .description {
+    display: block;
+    opacity: 1;
+  }
+  main section div.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .product-container > * {
+    flex: 22%;
+  }
+  footer .promos {
+    display: flex;
+  }
+  footer .promos > * {
+    width: 33%;
   }
 }
