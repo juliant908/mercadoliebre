@@ -284,11 +284,14 @@ main div form div {
   width: 100%;
   margin: 0;
   padding: 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loginbtn {
   background-color: var(--celeste);
-  width: 100%;
+  width: 75%;
   color: white;
   border-radius: 0.5rem;
   height: 5rem;
