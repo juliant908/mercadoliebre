@@ -309,7 +309,8 @@ main div form div {
   padding: 2rem;
   align-items: flex-start;
 }
-.datos_usuario {
+.datos_usuario,
+.password {
   width: 100%;
 }
 .datos_usuario > * {
@@ -320,9 +321,7 @@ main div form div {
   padding-left: 0;
   width: 100%;
 }
-.password {
-  width: 100%;
-}
+
 .password > input {
   margin-top: 0.5em;
   width: 100%;
@@ -375,7 +374,7 @@ footer section {
   text-align: center;
   margin: auto;
   width: 75%;
-  padding: 2em 0 2em 0;
+  padding: 2em;
   color: var(--gris-oscuro);
 }
 footer section i {
