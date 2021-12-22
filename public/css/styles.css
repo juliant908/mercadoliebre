@@ -347,6 +347,10 @@ main div form div {
   border: none;
   cursor: pointer;
 }
+
+.enviar {
+  margin-right: 1em;
+}
 button:hover {
   background-color: #0022aa;
 }
